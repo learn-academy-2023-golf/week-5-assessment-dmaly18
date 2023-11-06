@@ -14,3 +14,9 @@ totals = taco_votes.reduce(Hash.new(0)) do |result, vote|
 end
 
 p totals
+
+# taco_votes is a array that contains the votes for different types of tacos
+# totals is a variable that will store the result of vote counting initalized as a empty hash
+#taco_votes.reduce(Hash.new(0)) do |result, vote|: This line uses the reduce method to iterate over the taco_votes array. reduce is used to accumulate a value, in this case, a hash, by applying a block of code to each element of the array. Hash.new(0) is used to initialize an empty hash with a default value of 0. This hash will store the vote counts.
+#result[vote.downcase] accesses the hash with the lowercase vote as the key.
+#.downcase is used to convert the vote to lowercase, ensuring that case sensitivity is ignored. For example, "Fish Taco" and "fish taco" will be treated as the same vote.
